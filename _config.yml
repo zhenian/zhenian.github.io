@@ -3,18 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
-timezone:
+title: "这一年"
+subtitle: "一年一轮回，一年一人生。"
+description: "生命无常，因而：<br/>热情地挥洒汗水，<br/>尽情地享受生命；<br/>人生终归，故而：<br/>生如夏花之绚丽，<br/>死如秋叶之静美。"
+author: "者年"
+language: "zh-Hans"
+timezone: "Asia/Shanghai"
+avatar: "/uploads/avatar.jpg"
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://zhenian.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:title/
 permalink_defaults:
 
 # Directory
@@ -63,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
