@@ -30,6 +30,9 @@ after_script:
 
 
 # E: Build LifeCycle
+branches:
+  except:
+  - master
 
 branches:
   only:
