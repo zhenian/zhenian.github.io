@@ -20,6 +20,7 @@ script:
 
 after_script:
   - cd public
+  - echo " www.zhenian.com " > README.md
   - git init
   - git config user.name "zhenian"
   - git config user.email "zhenian@qq.com"
