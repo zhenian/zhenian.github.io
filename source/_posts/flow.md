@@ -6,7 +6,6 @@ tags:
 - 心流
 - 流体验
 categories:
-- Thinkinger
 - 概念
 ---
 
