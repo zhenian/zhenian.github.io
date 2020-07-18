@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/favicon-16x16-next.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.zhenian.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":12,"offset":8,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="一，控制控制(Control)一词有着诸多含义。具体可以看 wikipedia 上的列表。这在儿，我想讨论的是系统中的控制。 控制是控制系统的操作模式。这个控制系统包含两个客体，这两个客体也是系统，可以叫子系统。两个子系统，一个是作为控制器 C，一个是被控制器 S。  两个子系统 C 和 S 是相互作用的，在功能上是不同的。这在要说明的是，区分两个子系统是从功能上说的，但是，其主体有可能是指同一个">
+<meta name="keywords" content="概念,反馈,控制,控制系统,感知">
+<meta property="og:type" content="article">
+<meta property="og:title" content="控制(Control)">
+<meta property="og:url" content="http://www.zhenian.com/2017/0005-control/index.html">
+<meta property="og:site_name" content="未来记事：这一年">
+<meta property="og:description" content="一，控制控制(Control)一词有着诸多含义。具体可以看 wikipedia 上的列表。这在儿，我想讨论的是系统中的控制。 控制是控制系统的操作模式。这个控制系统包含两个客体，这两个客体也是系统，可以叫子系统。两个子系统，一个是作为控制器 C，一个是被控制器 S。  两个子系统 C 和 S 是相互作用的，在功能上是不同的。这在要说明的是，区分两个子系统是从功能上说的，但是，其主体有可能是指同一个">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.zhenian.com/images/0005/control1.gif">
+<meta property="og:image" content="http://www.zhenian.com/images/0005/control2.gif">
+<meta property="og:image" content="http://www.zhenian.com/images/0005/control3.gif">
+<meta property="og:updated_time" content="2020-07-18T14:59:42.223Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="控制(Control)">
+<meta name="twitter:description" content="一，控制控制(Control)一词有着诸多含义。具体可以看 wikipedia 上的列表。这在儿，我想讨论的是系统中的控制。 控制是控制系统的操作模式。这个控制系统包含两个客体，这两个客体也是系统，可以叫子系统。两个子系统，一个是作为控制器 C，一个是被控制器 S。  两个子系统 C 和 S 是相互作用的，在功能上是不同的。这在要说明的是，区分两个子系统是从功能上说的，但是，其主体有可能是指同一个">
+<meta name="twitter:image" content="http://www.zhenian.com/images/0005/control1.gif">
+
+<link rel="canonical" href="http://www.zhenian.com/2017/0005-control/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>控制(Control) | 未来记事：这一年</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">未来记事：这一年</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">未来已来，这里记录的是明日往事。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.zhenian.com/2017/0005-control/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="者年">
+      <meta itemprop="description" content="生命无常，因而：<br/>热情地挥洒汗水，<br/>尽情地享受生命；<br/>人生终归，故而：<br/>生如夏花之绚丽，<br/>死如秋叶之静美。</center>">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="未来记事：这一年">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          控制(Control)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2017-08-13 23:10:16" itemprop="dateCreated datePublished" datetime="2017-08-13T23:10:16+08:00">2017-08-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-18 22:59:42" itemprop="dateModified" datetime="2020-07-18T22:59:42+08:00">2020-07-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/概念/" itemprop="url" rel="index"><span itemprop="name">概念</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一，控制"><a href="#一，控制" class="headerlink" title="一，控制"></a>一，控制</h1><p><a href="https://en.wikipedia.org/wiki/Control" target="_blank" rel="noopener">控制(Control)</a>一词有着诸多含义。具体可以看 <a href="https://en.wikipedia.org/wiki/Control" target="_blank" rel="noopener">wikipedia</a> 上的列表。这在儿，我想讨论的是系统中的控制。</p>
+<p>控制是控制系统的操作模式。这个控制系统包含两个客体，这两个客体也是系统，可以叫子系统。两个子系统，一个是作为控制器 C，一个是被控制器 S。</p>
+<p><img src="/images/0005/control1.gif" alt="控制系统1"></p>
+<p>两个子系统 C 和 S 是相互作用的，在功能上是不同的。这在要说明的是，区分两个子系统是从功能上说的，但是，其主体有可能是指同一个系统，即这个系统具备作为控制器和被控制的能力。</p>
+<p>控制器系统 C 在系统 S 上的行为和 系统 S 在控制器系统 C 上的行为是不同的。控制器系统 C 可以以任何方式改变系统 S 的状态，包含破坏系统 S 。系统 S 作用在控制器系统 C 的行为是，感知系统 S 的信息。</p>
+<h1 id="二，-感知"><a href="#二，-感知" class="headerlink" title="二， 感知"></a>二， 感知</h1><p><img src="/images/0005/control2.gif" alt="控制系统2"></p>
+<p>我们来看看什么是感知。 我们把 S 再划分，其一是代理人 Agent 对象，这个代理人对象负责控制器的行为；其二是被控制系统的表征 P。Agent 和 P 之间的关系被描述为信息流，Agent 的动作取决于这个信息流。因此，C 对 S 的行为是有限的，等效于 S 在 C 中的表征 P, 不包含 P 中没有描述的部分。 因此，可以看到，控制关系是不对称的。 C 控制 S，但是 S 不能控制 C。 S 对于 C 的行为是一种信息过滤，其对于 C 影响不大于 P 允许表示的状态。</p>
+<p>从这可以看到 C 感知 S，表征为 P，从中看到，感知的信息是有限的，局部的，是不完全的。</p>
+<p>当然，两个系统可以处于相互控制的状态，这是一个不同的，更为复杂的关系。仍可以把它们俩描述为两上不对称控制关系的组合。</p>
+<h1 id="三，反馈"><a href="#三，反馈" class="headerlink" title="三，反馈"></a>三，反馈</h1><p><img src="/images/0005/control3.gif" alt="控制系统3"></p>
+<p>很多情况下，被控制系统可以更详细地描述，把可描述变量分为可被观察变量 OV ，以及控制器可以作用影响变量 AV。 这两种变量的因果有关系，由 S 的内在关系决定。其中由于系统的特性，有些变量的变化是不可控的，会对 OV 造成干扰。</p>
+<p>此外，在图3中，包含了一个可以影响 Agent 的对象:目标 G。 Agent 将当前的 P 和 G 进行比较，并采取趋向最小化它们之间的差异的行动。这被称为有目的的行为。控制系统不一定存在客观目标。但是这个目标可能会被嵌入到系统中。一个典型的控制系统会包含目标。</p>
+<p>另外，即使控制关系是不对称的，但这不对称的关系是一个闭环。从 C 来看，循环从其动作开始，作用于 S，S状态改变，其后 C 对 S 的感知更新，形成一个闭环。描述 C 和 S 的这个闭环关系，称其为反馈。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>者年
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.zhenian.com/2017/0005-control/" title="控制(Control)">http://www.zhenian.com/2017/0005-control/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/概念/" rel="tag"># 概念</a>
+              <a href="/tags/反馈/" rel="tag"># 反馈</a>
+              <a href="/tags/控制/" rel="tag"># 控制</a>
+              <a href="/tags/控制系统/" rel="tag"># 控制系统</a>
+              <a href="/tags/感知/" rel="tag"># 感知</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/0004-meta/" rel="prev" title="元 (Meta)">
+      <i class="fa fa-chevron-left"></i> 元 (Meta)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/0006-the-metasystem-transition/" rel="next" title="元系统跃迁(The Metasystem Transition)">
+      元系统跃迁(The Metasystem Transition) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一，控制"><span class="nav-number">1.</span> <span class="nav-text">一，控制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二，-感知"><span class="nav-number">2.</span> <span class="nav-text">二， 感知</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三，反馈"><span class="nav-number">3.</span> <span class="nav-text">三，反馈</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="者年"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">者年</p>
+  <div class="site-description" itemprop="description">生命无常，因而：<br/>热情地挥洒汗水，<br/>尽情地享受生命；<br/>人生终归，故而：<br/>生如夏花之绚丽，<br/>死如秋叶之静美。</center></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zhenian" title="GitHub → https://github.com/zhenian" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhenian@qq.com" title="E-Mail → mailto:zhenian@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/zhenian" title="Weibo → https://weibo.com/zhenian" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">者年</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
