@@ -1,24 +1,19 @@
+sudo: false
 language: node_js
-node_js: stable
-
-# Travis-CI Caching
-cache:
-  directories:
-    - node_modules
-
-# S: Build Lifecycle
+node_js:
+  - 10 # use nodejs v10 LTS
+cache: npm
+branches:
+  except:
+    - master
+  only:
+    - working
 install:
   - npm install
-
 before_script:
-  - git submodule update --init --recursive
   - npm install -g hexo-cli
-
-
 script:
   - hexo generate
-
-
 after_script:
   - cd public
   - echo " www.zhenian.com " > README.md
@@ -29,15 +24,6 @@ after_script:
   - git commit -m "re-init from travis"
   - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:master
 
-
-
-# E: Build LifeCycle
-branches:
-  except:
-    - master
-  only:
-    - working
 env:
   global:
     - GH_REF: github.com/zhenian/zhenian.github.io.git
-#    - secure: "D/+Ogb+g3rKZggmuD39z7JZ0os7t/YsKWEZuDyYnFk+DrgNPnQ6ENpejm8D5veFwzJWR5V+k51JZ0sqQhaxoOyO80PGUenFff/pAwKUn1trgcNf9dREKfuFejP6NsyEVrigzcDq0tRG7nSLC1jn58pfsH2pAlEbdVpePtVkei6F0MboduLiDLtq2l9R0XE9+mPA5AafS4eDtkKMCIoxzhIBSc0Z7irrarWA4brJIFW5A5Hj5qa5Yz2okUtsprKl4ZEKhriRB5/C1o7d+6LUhGwsgBi4jsgpZw3Y2fl4gHn7pWL/Ip4gKLrXA8ldSMUKWsgtsgKL/ZR2T2yxWBR4muEE8W7rS7su/pUNVH15VFx64lxSYIZDE8zmXO0Drk7DcJDIdXNfIC1DntCUINzDlBTXcu+gCoVhDg75soWqRiNj99sa74zkRSAWZ2A6iQs7LfYHEG51jXUqK1Obu3qh5csW1drO63rwjbhSXPoOcOTvTeqaTh8GMdZ6u09L+XrK2agTt5QVyX+vl0RfprmDn2noJNk+ItCOria4tJZsQWpwmQYHrgNktCQL+dz0oJD25j12zfJg2UurK3NnTuJELJWIt5FvtS0wTtYFk4GVWFW+H8OLzRsEsT/YDX5RRnXk4QKbxyKsBbJEFNEE+WYrJmq3/QlvSO/Un/9SVpjS5D3U="
