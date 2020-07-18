@@ -4,7 +4,9 @@
 
 谨记!
 
-# power by 
+# power by
 
 1. [Hexo](https://hexo.io/)
-2. [Next](http://notes.iissnan.com) @ [github](https://github.com/iissnan/hexo-theme-next)
+2. [Next@github](https://github.com/theme-next/hexo-theme-next)
+3.  Next Theme 配置 https://theme-next.js.org/docs/
+
