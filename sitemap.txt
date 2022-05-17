@@ -1,3 +1,5 @@
+http://www.zhenian.com/link/index.html
+http://www.zhenian.com/tags/index.html
 http://www.zhenian.com/2016/0001-zhenian/
 http://www.zhenian.com/2016/0002-flow/
 http://www.zhenian.com/2017/0003-goal/
@@ -6,8 +8,6 @@ http://www.zhenian.com/2017/0005-control/
 http://www.zhenian.com/2017/0006-the-metasystem-transition/
 http://www.zhenian.com/about/index.html
 http://www.zhenian.com/categories/index.html
-http://www.zhenian.com/link/index.html
-http://www.zhenian.com/tags/index.html
 http://www.zhenian.com/
 http://www.zhenian.com/tags/%E8%BF%99%E4%B8%80%E5%B9%B4/
 http://www.zhenian.com/tags/%E6%96%87%E9%9D%92/
