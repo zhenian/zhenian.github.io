@@ -4,7 +4,7 @@
   <url>
     <loc>http://www.zhenian.com/2016/0001-zhenian/</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>http://www.zhenian.com/2016/0002-flow/</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,7 @@
   <url>
     <loc>http://www.zhenian.com/2017/0003-goal/</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
   <url>
     <loc>http://www.zhenian.com/2017/0004-meta/</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +40,7 @@
   <url>
     <loc>http://www.zhenian.com/2017/0005-control/</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +49,16 @@
   <url>
     <loc>http://www.zhenian.com/2017/0006-the-metasystem-transition/</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.zhenian.com/2024/0007-2024-04-23-the-one-thing/</loc>
+    
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +67,7 @@
   <url>
     <loc>http://www.zhenian.com/about/index.html</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +76,7 @@
   <url>
     <loc>http://www.zhenian.com/categories/index.html</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,7 +85,7 @@
   <url>
     <loc>http://www.zhenian.com/link/index.html</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,7 +94,7 @@
   <url>
     <loc>http://www.zhenian.com/tags/index.html</loc>
     
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,7 +103,7 @@
 
   <url>
     <loc>http://www.zhenian.com/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,112 +111,126 @@
   
   <url>
     <loc>http://www.zhenian.com/tags/%E8%BF%99%E4%B8%80%E5%B9%B4/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E6%96%87%E9%9D%92/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/Flow/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E5%BF%83%E6%B5%81/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E6%B5%81%E4%BD%93%E9%AA%8C/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E8%AE%A1%E5%88%92/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E6%A6%82%E5%BF%B5/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E5%85%83/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E6%8A%BD%E8%B1%A1/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E5%8F%8D%E9%A6%88/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E6%8E%A7%E5%88%B6/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E6%84%9F%E7%9F%A5/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E5%85%83%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/tags/%E5%85%83%E7%B3%BB%E7%BB%9F%E8%B7%83%E8%BF%81/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.zhenian.com/tags/%E6%95%88%E7%8E%87/</loc>
+    <lastmod>2024-04-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.zhenian.com/tags/%E6%96%B9%E6%B3%95%E7%8E%87/</loc>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -216,14 +239,21 @@
   
   <url>
     <loc>http://www.zhenian.com/categories/NONE/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://www.zhenian.com/categories/%E6%A6%82%E5%BF%B5/</loc>
-    <lastmod>2023-11-12</lastmod>
+    <lastmod>2024-04-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.zhenian.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2024-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
